@@ -1,0 +1,143 @@
+:root{
+    --color-azul: #056CF2;
+    --color-rojo: #F2BE22;
+    --color-azula-bajo: #0583F2;
+    --color-azul-oscuro: #023E73;
+    --color-negro: #0D0D0D;
+    --color-blanco: #F2F2F2;
+    --font:'Roboto', sans-serif; 
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font); 
+    box-sizing: border-box;
+    
+}
+
+.header{
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+.contenedor-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    align-items: center;
+}
+.header-nav{
+    display: flex;
+    color: var(--color-blanco);
+    list-style: none;
+}
+.navbar-link{
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+.header-nav a:hover{
+    color: #F2BE22;
+}
+
+
+/* Card de persona  */
+
+.about{
+
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+
+
+/* .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--color-azula-bajo) ;
+    font-family: var(--font);
+    padding: 0 20px;
+} */
+.card-container{
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    width: 600px;
+    height: auto;
+    background: var(--color-blanco);
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2);
+}
+.headers{
+    border-right: 1px solid #ddd ;
+
+}
+
+.descripcion{
+    background: var(--color-blanco);
+}
+.headers, .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+.headers a{
+    position: relative;
+    display: block;
+}
+.headers img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    margin: 20px 30px;
+    transition: .2s;
+}
+.headers a:hover img{
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+}
+.headers h2{
+    color: var(--color-rojo);
+}
+.headers h4{
+    margin-bottom: 20px;
+}
+.descripcion{
+    position: relative;
+
+}
+.descripcion p{
+    margin: 20px 30px;
+}
+.descripcion .social{
+    margin-top: 25px;
+}
+.descripcion .social a{
+    display: inline-block;
+    padding: 0 15px;
+    color: var(--color-rojo);
+
+}
+@media(max-width:640px){
+    .card-container{
+        display: block;
+    }
+    .headers{
+        padding: 20px 20px 5px 20px;
+    }
+    .descripcion{
+        padding: 5px 20px 20px 20px ;
+        background: transparent;
+    }
+    .headers h4{
+        margin: 0;
+    }
+}
